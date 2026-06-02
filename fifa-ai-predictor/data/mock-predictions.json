@@ -1,0 +1,4 @@
+[
+  { "teamA": "Brazil", "teamB": "Germany", "probA": 60, "probB": 40 },
+  { "teamA": "Argentina", "teamB": "France", "probA": 55, "probB": 45 }
+]
