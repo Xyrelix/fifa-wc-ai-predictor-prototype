@@ -2,22 +2,84 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="AI-powered FIFA World Cup 2026 prediction prototype with team insights, fixtures and analytics.">
   <title>FIFA AI Predictor</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <header>
-    <h1>FIFA World Cup 2026 AI Predictor (Prototype)</h1>
-    <nav>
+  <header class="site-header">
+    <div class="brand-wrap">
+      <p class="eyebrow">FIFA World Cup 2026</p>
+      <a class="brand" href="index.html">AI Football Predictor</a>
+    </div>
+    <nav class="main-nav">
       <a href="team-dashboard.html">Teams</a>
       <a href="match-predictor.html">Predictor</a>
       <a href="fixtures.html">Fixtures</a>
       <a href="analytics.html">Analytics</a>
     </nav>
   </header>
-  <main>
-    <p>Welcome to the prototype! Explore predictions for the 48 teams.</p>
+
+  <main class="page-shell">
+    <section class="hero-card">
+      <div class="hero-copy">
+        <p class="eyebrow accent">Prototype experience</p>
+        <h1>Predict every match with a modern AI football dashboard.</h1>
+        <p class="lede">Explore a clean, football-friendly landing page that brings together team strength, fixture flow, and match intelligence for the 2026 tournament.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="match-predictor.html">Open predictor</a>
+          <a class="button button-secondary" href="analytics.html">View analytics</a>
+        </div>
+      </div>
+      <aside class="hero-panel">
+        <div class="mini-card">
+          <span>Featured insight</span>
+          <strong>48 teams</strong>
+          <small>Data-driven preview for the full tournament field.</small>
+        </div>
+        <div class="mini-card">
+          <span>Next step</span>
+          <strong>Real-time match view</strong>
+          <small>Use the predictor, fixtures and dashboard modules together.</small>
+        </div>
+      </aside>
+    </section>
+
+    <section class="grid three-up">
+      <article class="info-card">
+        <h2>Team intelligence</h2>
+        <p>Review form, player strength, and group outlook from one easy-to-scan dashboard.</p>
+      </article>
+      <article class="info-card">
+        <h2>Match predictions</h2>
+        <p>Compare probable winners, confidence levels, and scenario-based tournament forecasts.</p>
+      </article>
+      <article class="info-card">
+        <h2>Fixture planning</h2>
+        <p>Track upcoming games and move through the competition flow without losing sight of the big picture.</p>
+      </article>
+    </section>
+
+    <section class="panel-grid">
+      <article class="panel-card">
+        <h2>How the prototype works</h2>
+        <ul class="feature-list">
+          <li>Load team and fixture data from the built-in JSON files.</li>
+          <li>Visualize the tournament story with accessible cards and charts.</li>
+          <li>Keep the layout clean and responsive for desktop and mobile.</li>
+        </ul>
+      </article>
+      <article class="panel-card highlight-card">
+        <h2>Prototype spotlight</h2>
+        <p>Built as a lightweight front-end concept, this page sets the tone for the full AI football experience we are shaping for the 2026 World Cup.</p>
+      </article>
+    </section>
   </main>
+
   <script src="js/main.js"></script>
 </body>
 </html>
