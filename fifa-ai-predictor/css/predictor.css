@@ -1,6 +1,117 @@
-form {
-  margin-bottom: 20px;
+:root {
+  --bg-deep: #06111f;
+  --panel-soft: rgba(8, 16, 29, 0.88);
+  --panel-strong: #10233a;
+  --line: rgba(145, 179, 223, 0.18);
+  --text: #edf5ff;
+  --muted: #bfd4f4;
+  --accent: #57c6ff;
 }
-#result {
-  font-weight: bold;
+
+body {
+  background:
+    radial-gradient(circle at top, rgba(87, 198, 255, 0.12), transparent 26%),
+    linear-gradient(145deg, #040b12 0%, #061120 45%, #08111d 100%);
+}
+
+.predictor-shell {
+  display: grid;
+  gap: 1rem;
+}
+
+.predictor-hero-card {
+  padding: 1rem;
+}
+
+.predictor-grid {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 1rem;
+}
+
+.predictor-panel,
+.predictor-result-card {
+  padding: 1rem;
+  background: var(--panel-soft);
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  box-shadow: 0 18px 45px rgba(3, 8, 18, 0.45);
+}
+
+.panel-copy {
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.predict-form {
+  display: grid;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.field-label {
+  color: var(--text);
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.predict-select {
+  width: 100%;
+  border-radius: 14px;
+  border: 1px solid var(--line);
+  background: linear-gradient(180deg, rgba(7, 13, 23, 0.98), rgba(11, 20, 35, 0.98));
+  color: var(--text);
+  padding: 0.9rem 0.95rem;
+  font: inherit;
+}
+
+.predict-select:focus {
+  outline: 2px solid rgba(87, 198, 255, 0.35);
+  border-color: rgba(87, 198, 255, 0.65);
+}
+
+.predict-button {
+  justify-self: start;
+  margin-top: 0.35rem;
+}
+
+.result-card {
+  margin-top: 1rem;
+  padding: 1rem;
+  border-radius: 18px;
+  border: 1px solid var(--line);
+  background: linear-gradient(180deg, rgba(12, 21, 36, 0.98), rgba(7, 14, 23, 0.98));
+  color: var(--text);
+  line-height: 1.5;
+}
+
+.result-card strong {
+  display: block;
+  font-size: 1.02rem;
+  margin-bottom: 0.2rem;
+}
+
+.result-card .forecast-pill {
+  display: inline-flex;
+  align-items: center;
+  margin-top: 0.35rem;
+  padding: 0.35rem 0.6rem;
+  border-radius: 999px;
+  background: rgba(87, 198, 255, 0.12);
+  color: #c8f4ff;
+  font-size: 0.92rem;
+}
+
+@media (max-width: 980px) {
+  .predictor-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 720px) {
+  .predict-button {
+    width: 100%;
+    justify-self: stretch;
+    text-align: center;
+  }
 }

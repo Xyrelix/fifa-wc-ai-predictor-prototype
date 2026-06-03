@@ -2,17 +2,76 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="AI-powered match prediction interface for the FIFA World Cup 2026 prototype.">
   <title>Match Predictor</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/predictor.css">
 </head>
 <body>
-  <h2>Match Predictor</h2>
-  <form id="predictForm">
-    <select id="teamA"></select>
-    <select id="teamB"></select>
-    <button type="submit">Predict</button>
-  </form>
-  <div id="result"></div>
+  <header class="site-header">
+    <div class="brand-wrap">
+      <p class="eyebrow">FIFA World Cup 2026</p>
+      <a class="brand" href="index.html">CELOSEER</a>
+    </div>
+    <nav class="main-nav">
+      <a href="team-dashboard.html">Teams</a>
+      <a href="match-predictor.html">Predictor</a>
+      <a href="fixtures.html">Fixtures</a>
+      <a href="analytics.html">Analytics</a>
+    </nav>
+  </header>
+
+  <main class="page-shell predictor-shell">
+    <section class="hero-card predictor-hero-card">
+      <div class="hero-copy">
+        <p class="eyebrow accent">AI match prediction</p>
+        <h1>Build a quick forecast for any matchup in the tournament.</h1>
+        <p class="lede">A clearer, football-first prediction panel with stronger contrast, readable controls, and a polished result view for your prototype.</p>
+      </div>
+      <aside class="hero-panel">
+        <div class="mini-card">
+          <span>What changes</span>
+          <strong>Refined layout</strong>
+          <small>Improved spacing, stronger hierarchy, and a modern prediction workspace.</small>
+        </div>
+        <div class="mini-card">
+          <span>Prototype focus</span>
+          <strong>Fast visual feedback</strong>
+          <small>Choose two teams and generate a live matchup insight instantly.</small>
+        </div>
+      </aside>
+    </section>
+
+    <section class="predictor-grid">
+      <article class="panel-card predictor-panel">
+        <p class="eyebrow accent">Match simulator</p>
+        <h2>Choose the teams</h2>
+        <p class="panel-copy">Select any two sides from the built-in tournament dataset to generate an instant AI-style forecast.</p>
+
+        <form id="predictForm" class="predict-form">
+          <label class="field-label" for="teamA">Home team</label>
+          <select id="teamA" class="predict-select" required></select>
+
+          <label class="field-label" for="teamB">Away team</label>
+          <select id="teamB" class="predict-select" required></select>
+
+          <button class="button button-primary predict-button" type="submit">Generate prediction</button>
+        </form>
+      </article>
+
+      <article class="panel-card predictor-result-card">
+        <p class="eyebrow accent">Forecast output</p>
+        <h2>Prediction summary</h2>
+        <p class="panel-copy">The result card now reads like a real match insight, with clear confidence cues and a cleaner layout.</p>
+        <div id="result" class="result-card">Select two teams and press the button to generate a live forecast.</div>
+      </article>
+    </section>
+  </main>
+
   <script src="js/predictor.js"></script>
 </body>
 </html>
