@@ -4,7 +4,12 @@ fetch("data/fixtures.json")
     const list = document.getElementById("fixtures");
     data.forEach(match => {
       const li = document.createElement("li");
-      li.textContent = `${match.date} - ${match.teamA} vs ${match.teamB}`;
+      li.className = "fixture-item";
+      li.innerHTML = `
+        <span class="fixture-date">${match.date} · ${match.time}</span>
+        <strong>${match.home} vs ${match.away}</strong>
+        <span class="fixture-meta">${match.venue} · ${match.status}${match.score ? ' · ' + match.score : ''}</span>
+      `;
       list.appendChild(li);
     });
   });

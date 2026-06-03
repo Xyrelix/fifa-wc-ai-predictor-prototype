@@ -2,12 +2,43 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Fixtures</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/dashboard.css">
 </head>
 <body>
-  <h2>Upcoming Fixtures</h2>
-  <ul id="fixtures"></ul>
+  <header class="site-header">
+    <div class="brand-wrap">
+      <p class="eyebrow">FIFA World Cup 2026</p>
+      <a class="brand" href="index.html">CELOSEER</a>
+    </div>
+    <nav class="main-nav">
+      <a href="team-dashboard.html">Teams</a>
+      <a href="match-predictor.html">Predictor</a>
+      <a href="fixtures.html">Fixtures</a>
+      <a href="analytics.html">Analytics</a>
+    </nav>
+  </header>
+
+  <main class="page-shell">
+    <section class="hero-card">
+      <div class="hero-copy">
+        <p class="eyebrow accent">Friendly fixtures</p>
+        <h1>Review the May 27 – June 10 friendly window.</h1>
+        <p class="lede">The fixture feed now lists each matchup, kickoff time, venue, and result status for the expanded 48-team tournament view.</p>
+      </div>
+    </section>
+
+    <section class="panel-card fixture-card">
+      <h2>Friendly fixtures and results</h2>
+      <ul id="fixtures" class="fixture-list"></ul>
+    </section>
+  </main>
+
   <script src="js/fixtures.js"></script>
 </body>
 </html>

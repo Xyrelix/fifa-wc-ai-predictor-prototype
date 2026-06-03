@@ -2,12 +2,43 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Team Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/dashboard.css">
 </head>
 <body>
-  <h2>Teams Overview</h2>
-  <div id="teams"></div>
+  <header class="site-header">
+    <div class="brand-wrap">
+      <p class="eyebrow">FIFA World Cup 2026</p>
+      <a class="brand" href="index.html">CELOSEER</a>
+    </div>
+    <nav class="main-nav">
+      <a href="team-dashboard.html">Teams</a>
+      <a href="match-predictor.html">Predictor</a>
+      <a href="fixtures.html">Fixtures</a>
+      <a href="analytics.html">Analytics</a>
+    </nav>
+  </header>
+
+  <main class="page-shell">
+    <section class="hero-card">
+      <div class="hero-copy">
+        <p class="eyebrow accent">48-team roster</p>
+        <h1>Explore the full 2026 World Cup candidate lineup.</h1>
+        <p class="lede">Each team card now includes its country flag and code, making the dashboard easier to scan for the expanded tournament field.</p>
+      </div>
+    </section>
+
+    <section class="panel-card">
+      <h2>Teams overview</h2>
+      <div id="teams"></div>
+    </section>
+  </main>
+
   <script src="js/teams.js"></script>
 </body>
 </html>

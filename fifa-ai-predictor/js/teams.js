@@ -3,9 +3,13 @@ fetch("data/teams.json")
   .then(data => {
     const container = document.getElementById("teams");
     data.forEach(team => {
-      const div = document.createElement("div");
+      const div = document.createElement("article");
       div.className = "team-card";
-      div.textContent = team.name;
+      div.innerHTML = `
+        <span class="team-flag">${team.flag || '⚽'}</span>
+        <strong>${team.name}</strong>
+        <small>${team.code || 'TBD'}</small>
+      `;
       container.appendChild(div);
     });
   });
