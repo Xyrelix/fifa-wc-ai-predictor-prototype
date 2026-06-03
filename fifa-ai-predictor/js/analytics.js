@@ -3,11 +3,11 @@ const ctxAccuracy = document.getElementById("accuracyChart").getContext("2d");
 new Chart(ctxAccuracy, {
   type: "bar",
   data: {
-    labels: ["Brazil", "Germany", "Argentina", "France"],
+    labels: ["Brazil", "Germany", "Argentina", "France", "Spain", "England"],
     datasets: [{
       label: "Prediction Accuracy (%)",
-      data: [75, 60, 80, 70],
-      backgroundColor: ["#004080", "#008000", "#800000", "#FFD700"]
+      data: [75, 60, 80, 70, 65, 72],
+      backgroundColor: ["#004080", "#008000", "#800000", "#FFD700", "#FFC700", "#DC143C"]
     }]
   },
   options: {
